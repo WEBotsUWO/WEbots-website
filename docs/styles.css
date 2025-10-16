@@ -301,12 +301,24 @@ section{
     height:60%;
     
   }
-  section .cards .text-card {
-    background-color:#2d8914 ;
-    margin:25px;
-    padding:10px;
-    border-radius:25px;
-  }
+  /* ----- Clickable Subteam Cards ----- */
+.text-card {
+  background-color: #2d8914;
+  margin: 25px;
+  padding: 20px;
+  border-radius: 25px;
+  text-decoration: none;          /* removes underline on <a> */
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;                 /* makes the whole card clickable */
+}
+
+.text-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  background-color: #36a318;      /* slightly brighter green */
+}
+
  
   @media (max-width: 900px){
 
