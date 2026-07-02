@@ -19,205 +19,220 @@
 
 <body>
   <div class="container">
+    <header class="site-header">
+      <a href="index.html" class="logo" aria-label="WE Bots home">
+        <img class="logo-main-img" src="assets/logos/primary-main.png" alt="WE Bots logo">
+        <span class="full-team-name">Western Engineering Robotics Design Team</span>
+      </a>
 
-    <section class="one hero-section" id="top">
-      <header class="site-header">
-        <a href="index.html" class="logo" aria-label="WE Bots home">
-          <img class="logo-img" src="small-logo.png" alt="WE Bots logo">
-          <h2>WE BOTS</h2>
-        </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+      <nav class="nav-bar" id="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a class="nav-cta" href="sponsors.html">Sponsor Us</a></li>
+          <li><a class="nav-join" href="#join">Join</a></li>
+        </ul>
+      </nav>
+    </header>
 
-        <nav class="nav-bar" id="main-nav" aria-label="Main navigation">
-          <ul>
-            <!--<li> <a href="#" class="link 1">Home placeholder</a></li>-->
-            <li><a href="#section-2">About</a></li>
-            <li><a href="titan.html">TITAN</a></li>
-            <li><a href="#section-3">How We Work</a></li>
-            <li><a href="#section-4">Gallery</a></li>
-            <li><a href="hall-of-fame.html">Hall of Fame</a></li>
-            <!--<li> <a href="#section-5">Sponsors</a></li>-->
-            <li><a class="nav-cta" href="#section-6">Join Now</a></li>
-          </ul>
-        </nav>
-      </header>
-
-      <div class="hero-content">
-        <img class="main-logo" src="we-main3.png" alt="WE Bots main logo">
-        <div class="banner">
-          <div class="typewriter">
+    <main>
+      <section class="home-hero" id="home">
+        <div class="home-hero-inner">
+          <img class="hero-main-logo" src="assets/logos/primary-main.png" alt="WE Bots main logo">
+          <div class="hero-banner">
             <h1>WE BUILD ROBOTS!</h1>
           </div>
+          <p class="hero-subtitle">
+            Welcome to WE Bots: the Western Engineering Robotics Design Team. We are building Project JOSH, a student-developed humanoid robotics platform for hands-on learning, testing, and future competition.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="sponsors.html">Sponsor Us</a>
+            <a class="secondary-button" href="#join">Join WE Bots</a>
+            <a class="secondary-button" href="#josh">Meet JOSH</a>
+          </div>
         </div>
-        <p class="hero-subtitle">
-          Welcome to the Western Engineering Robotics Club, where we are building TITAN, an autonomous humanoid robot platform, for competition at the FIRA HuroCup.
-        </p>
-        <div class="hero-actions">
-          <a class="primary-button" href="#section-6">Join WE Bots</a>
-          <a class="secondary-button" href="titan.html">Learn About TITAN</a>
+      </section>
+
+      <section class="josh-feature-section" id="josh" aria-label="Meet Project JOSH">
+        <div class="section-content josh-feature-grid">
+          <div class="josh-visual-card">
+            <div class="josh-visual-orbit" aria-hidden="true"></div>
+            <img class="josh-concept" src="assets/images/josh-concept-render-v2.png" alt="3D concept render mockup of the Project JOSH humanoid robot">
+            <p class="concept-label">Concept render draft - not final hardware</p>
+          </div>
+
+          <div class="josh-info-card">
+            <p class="eyebrow">Project JOSH</p>
+            <h2 class="josh-acronym" aria-label="Just an Open Source Humanoid">
+              <span class="acronym-row"><span class="acronym-letter" aria-hidden="true">J</span><span>ust an</span></span>
+              <span class="acronym-row"><span class="acronym-letter" aria-hidden="true">O</span><span>pen</span></span>
+              <span class="acronym-row"><span class="acronym-letter" aria-hidden="true">S</span><span>ource</span></span>
+              <span class="acronym-row"><span class="acronym-letter" aria-hidden="true">H</span><span>umanoid</span></span>
+            </h2>
+            <p>
+              Meet JOSH, WE Bots' humanoid robot platform. The goal is to build a humanoid robot that can move through its environment autonomously, balance reliably, and handle general movement tasks.
+            </p>
+            <p>
+              As the platform develops, we aim for JOSH to compete in FIRA's Humanoid Robot Competition: The HuroCup, where robots take place in various sporting events such as basketball, marathon, archery and more.
+            </p>
+            <p class="josh-disclaimer">
+              Concept render only - not finished hardware or final CAD.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="two about-section">
-      <!--Photo carousel to the left of the About us section (section2)-->
-      <div class="slides" aria-label="WE Bots photo carousel">
-        <div class="slide slide-1">
-          <img src="ece.jpg" alt="WE Bots club photo 1">
+      <section class="about-section" id="about">
+        <div class="section-content">
+          <div class="section-title-card about-title-card">
+            <p class="eyebrow">About WE Bots</p>
+            <h2>Hands-on robotics, built by students.</h2>
+          </div>
+
+          <div class="two-column about-content-grid">
+            <div class="section-copy">
+              <p>
+                WE Bots gives students an accessible place to learn robotics by contributing to a real engineering project. Members can help with design, manufacturing, electronics, power systems, controls, software, testing, documentation, media, outreach, and sponsorship.
+              </p>
+              <p>
+                Our focus is not just finishing one robot. We are building the structure, technical knowledge, and documentation needed for future members to keep improving JOSH year after year.
+              </p>
+            </div>
+
+            <div class="photo-stack">
+              <img src="assets/images/ece.jpg" alt="WE Bots members working together">
+              <img src="assets/images/img2.jpeg" alt="WE Bots project progress photo">
+              <img src="assets/images/img3.jpeg" alt="WE Bots team workspace photo">
+            </div>
+          </div>
         </div>
-        <div class="slide slide-2">
-          <img src="img2.jpeg" alt="WE Bots club photo 2">
+      </section>
+
+      <section class="roadmap-section" id="roadmap">
+        <div class="section-content">
+          <div class="section-heading centered">
+            <p class="eyebrow">Roadmap</p>
+            <h2>Road to competition</h2>
+            <p>
+              The goal is to move Project JOSH from a student development platform into a robot prepared for future FIRA HuroCup-style competition. Dates are planning targets and may shift as testing progresses.
+            </p>
+          </div>
+
+          <div class="roadmap-flow" aria-label="Project JOSH roadmap from 2026 to 2028">
+            <article class="roadmap-step">
+              <span class="roadmap-date">Summer 2026</span>
+              <h3>Project JOSH begins</h3>
+              <p>WE Bots' previous humanoid robot project is officially retired and relaunched as Project JOSH, with a more cohesive design and strategy.</p>
+            </article>
+
+            <article class="roadmap-step">
+              <span class="roadmap-date">Fall 2026</span>
+              <h3>Foundations</h3>
+              <p>Reinforcement learning, preliminary simulation, early CAD design, CAN communication setup, and motor selection.</p>
+            </article>
+
+            <article class="roadmap-step">
+              <span class="roadmap-date">Winter 2026</span>
+              <h3>Systems depth</h3>
+              <p>Deep learning, advancing the simulation, better integration between teams, battery management system work, and 3D printing testing.</p>
+            </article>
+
+            <article class="roadmap-step">
+              <span class="roadmap-date">2027-2028</span>
+              <h3>Assembly and integration</h3>
+              <p>Assembly, full integration, full simulation and vision system testing, and preparation for competition.</p>
+            </article>
+
+            <article class="roadmap-step final-step">
+              <span class="roadmap-date">2028 Target</span>
+              <h3>Competition target</h3>
+              <p>Complete the design and prepare for FIRA HuroCup competition and more.</p>
+            </article>
+          </div>
         </div>
-        <div class="slide slide-3">
-          <img src="img3.jpeg" alt="WE Bots club photo 3">
+      </section>
+
+      <section class="link-section">
+        <div class="section-content feature-links">
+          <a class="feature-card" href="history.html">
+            <span>History</span>
+            <h2>Past projects and milestones</h2>
+            <p>Track earlier WE Bots work, project eras, competition records, and the path that led to JOSH.</p>
+          </a>
+
+          <a class="feature-card" href="team.html">
+            <span>Team</span>
+            <h2>Members and rosters</h2>
+            <p>See the current team, faculty leadership, and past rosters as they are collected and recognized.</p>
+          </a>
+
+          <a class="feature-card sponsor-card" href="sponsors.html">
+            <span>Sponsor Us</span>
+            <h2>Support student robotics</h2>
+            <p>Sponsors help fund parts, manufacturing, electronics, travel, outreach, and the long-term development of JOSH.</p>
+          </a>
         </div>
-      </div>
+      </section>
 
-      <div class="info">
-        <p class="eyebrow">About the club</p>
-        <h3 id="section-2">Who are WE?</h3>
+      <section class="join-section" id="join">
+        <div class="section-content join-card">
+          <div>
+            <p class="eyebrow">Join WE Bots</p>
+            <h2>New members are welcome.</h2>
+            <p>
+              Join the Discord to access the membership form and communicate with the team. No previous robotics experience is required.
+            </p>
+            <p class="meeting-callout">Summer meetings: Thursdays at 7:00 PM in ACEB 3435</p>
+          </div>
 
-        <p>
-          WE Bots is the Western Engineering Robotics Club. We give students an accessible place to learn, build, test, and lead robotics projects, regardless of their previous experience.
-        </p>
-
-        <p>
-          Our main project is TITAN, a 6-foot tall autonomous humanoid robot, the first of its kind built by an undergraduate engineering student club in Canada!
-        </p>
-
-        <h4>In-person meetings are currently on hold, enjoy the summer and see you next semester!</h4>
-      </div>
-    </section>
-
-    <section class="goal-section" id="goal">
-      <div class="section-content centered-content">
-        <p class="eyebrow">Our goal</p>
-        <h3>Building towards the FIRA HuroCup</h3>
-        <p class="large-text">
-          At WE Bots, we are developing TITAN to complete at the FIRA Hurocup. Our goal is to build the skills, documentation, hardware, and controls needed to work toward competing regularly in the future.
-        </p>
-
-        <div class="goal-grid">
-          <article class="goal-card">
-            <h5>What</h5>
-            <p>The HuroCup is an annual humanoid robot competition where robots compete in a variety of olympic-style events like weightlifting, archery, and more.</p>
-          </article>
-
-          <article class="goal-card">
-            <h5>When</h5>
-            <p>The current timeline projects TITAN to be ready for competition at the 2028 FIRA Canadian Open.</p>
-          </article>
-
-          <article class="goal-card">
-            <h5>How</h5>
-            <p>With your help of course! We look forward to seeing passionate individuals join the effort to make the project truly something special.</p>
-          </article>
+          <div class="contact-actions">
+            <a class="contact-button" href="https://discord.gg/RW7a62qgPr" aria-label="Join the WE Bots Discord">
+              <img src="assets/icons/discord.png" alt="Discord logo">
+              <span>Join Discord</span>
+            </a>
+            <a class="contact-button" href="https://instagram.com/webotsuwo?igshid=NTc4MTIwNjQ2YQ==" aria-label="Follow WE Bots on Instagram">
+              <img src="assets/icons/insta.png" alt="Instagram logo">
+              <span>Follow us on Instagram</span>
+            </a>
+          </div>
         </div>
+      </section>
+    </main>
 
-        <a class="primary-button" href="titan.html">View the TITAN project</a>
-      </div>
-    </section>
-
-    <section class="three work-section">
-      <div class="section-content centered-content">
-        <p class="eyebrow">How we work</p>
-        <h3 id="section-3">No experience required. No rigid subteam boxes.</h3>
-        <p class="large-text">
-          Previously WE Bots structured itself into mechanical, electrical, and software subteams. We are currently moving away from this, offering a more flexible project-based structure. Members can contribute wherever they are interested and wherever the robot needs work.
-        </p>
-
-        <div class="cards">
-          <article class="text-card">
-            <h5>Design & Build</h5>
-            <p>CAD, 3D printing, machining, prototyping, mechanisms, frames, joints, and robot assembly.</p>
-          </article>
-
-          <article class="text-card">
-            <h5>Electronics & Power</h5>
-            <p>Battery systems, wiring, voltage regulation, motor control, sensors, embedded devices, and safe integration.</p>
-          </article>
-
-          <article class="text-card">
-            <h5>Controls & Autonomy</h5>
-            <p>Robot control, simulations, communications, software tools, perception, testing scripts, and autonomous behavior.</p>
-          </article>
-
-          <article class="text-card">
-            <h5>Operations & Outreach</h5>
-            <p>Documentation, recruitment, sponsorship, website updates, events, onboarding, and keeping the club organized.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="four gallery-section">
-      <div class="section-content centered-content">
-        <p class="eyebrow">Progress</p>
-        <h3 id="section-4">Gallery and Past Projects</h3>
-        <p class="large-text">
-          A snapshot of our club, workspace, and project progress. This gallery will be added to as TITAN develops.
-        </p>
-
-        <div class="gallery-grid">
-          <img src="ece.jpg" alt="WE Bots gallery photo 1">
-          <img src="img2.jpeg" alt="WE Bots gallery photo 2">
-          <img src="img3.jpeg" alt="WE Bots gallery photo 3">
-        </div>
-      </div>
-    </section>
-
-    <section class="hall-preview-section">
-      <div class="section-content split-content">
+    <footer class="site-footer">
+      <div class="footer-grid">
         <div>
-          <p class="eyebrow">Recognition</p>
-          <h3>Hall of Fame</h3>
-          <p>
-            Each year, WE Bots recognizes the active members who contributed to the club, the robot, and the community around the project.
-          </p>
+          <a href="index.html" class="footer-logo" aria-label="WE Bots home">
+            <img src="assets/logos/primary-all-white.png" alt="WE Bots logo">
+          </a>
+          <p>Western Engineering Robotics Design Team</p>
+          <p class="footer-small">Student-built robotics at Western University.</p>
         </div>
 
-        <div class="preview-card">
-          <h5>Rosters</h5>
-          <p>
-            View active member rosters, as well as alumni recognition from past years, in the Hall Of Fame.
-          </p>
-          <a class="primary-button" href="hall-of-fame.html">View Hall of Fame</a>
+        <div>
+          <h3>Location</h3>
+          <p>Amit Chakma Engineering Building<br>Room 3435<br>Western University<br>London, Ontario N6A 3K7</p>
+          <p class="footer-small">Summer meetings: Thursdays at 7:00 PM</p>
+        </div>
+
+        <div>
+          <h3>Connect</h3>
+          <div class="footer-socials">
+            <a href="https://discord.gg/RW7a62qgPr" aria-label="Discord"><img src="assets/icons/discord.png" alt="Discord">Discord</a>
+            <a href="https://instagram.com/webotsuwo?igshid=NTc4MTIwNjQ2YQ==" aria-label="Instagram"><img src="assets/icons/insta.png" alt="Instagram">Instagram</a>
+            <a href="https://github.com/WEBotsUWO">GitHub</a>
+          </div>
         </div>
       </div>
-    </section>
-
-    <!--<section class="five">
-      <h3 id="section-5">SPONSORS</h3>
-    </section>-->
-
-    <section class="six join-section">
-      <div class="contact-us">
-        <p class="eyebrow">Join WE Bots</p>
-        <h3 id="section-6">Ready to get involved?</h3>
-        <p>
-          Join the Discord to get access to our server where all communications take place, and familiarize yourself with info given in the welcome message.
-        </p>
-        <p class="meeting-callout">Summer Meeting Time TBD</p>
-        <img id="robot" src="robot.png" alt="Robot illustration">
-      </div>
-
-      <div class="contact-info">
-        <a class="contact-button" href="https://discord.gg/RW7a62qgPr" aria-label="Join the Discord">
-          <img src="discord.png" alt="Discord logo">
-          <span>Join the Discord</span>
-        </a>
-
-        <a class="contact-button" href="https://instagram.com/webotsuwo?igshid=NTc4MTIwNjQ2YQ==" aria-label="Follow us on Instagram">
-          <img src="insta.png" alt="Instagram logo">
-          <span>Follow us on Instagram</span>
-        </a>
-      </div>
-    </section>
+      <p class="copyright">&copy; 2026 WE Bots. Western Engineering Robotics Design Team.</p>
+    </footer>
   </div>
 </body>
 
