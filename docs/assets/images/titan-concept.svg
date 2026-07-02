@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 2400" role="img" aria-labelledby="title desc">
+  <title id="title">TITAN humanoid robot concept visual</title>
+  <desc id="desc">A dark, angular humanoid robot concept with modular 3D-printed style panels, exposed joints, and WE Bots accent colors.</desc>
+  <defs>
+    <linearGradient id="shell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4b5058"/>
+      <stop offset="0.45" stop-color="#202328"/>
+      <stop offset="1" stop-color="#090a0c"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#111318"/>
+      <stop offset="0.5" stop-color="#59616e"/>
+      <stop offset="1" stop-color="#0b0d10"/>
+    </linearGradient>
+    <linearGradient id="joint" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7d8791"/>
+      <stop offset="0.45" stop-color="#2c3036"/>
+      <stop offset="1" stop-color="#08090b"/>
+    </linearGradient>
+    <radialGradient id="highlight" cx="35%" cy="12%" r="80%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="0.28" stop-color="#aeb5c0" stop-opacity="0.18"/>
+      <stop offset="0.75" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#000000" flood-opacity="0.32"/>
+    </filter>
+    <pattern id="printed" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <rect width="28" height="28" fill="transparent"/>
+      <path d="M0 14H28" stroke="#ffffff" stroke-opacity="0.035" stroke-width="3"/>
+    </pattern>
+  </defs>
+
+  <g filter="url(#softShadow)">
+    <!-- Head -->
+    <path d="M335 72 C365 32 535 32 565 72 C606 126 608 285 566 344 C526 398 374 398 334 344 C292 286 294 128 335 72Z" fill="url(#shell)"/>
+    <path d="M348 90 C382 55 520 55 552 90 C577 126 579 265 553 313 C520 360 382 360 348 313 C322 264 324 126 348 90Z" fill="url(#highlight)" opacity="0.9"/>
+    <path d="M376 236 C410 254 490 254 524 236" fill="none" stroke="#9aa2ad" stroke-opacity="0.25" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="450" cy="210" r="19" fill="#07080a" stroke="#4f5660" stroke-width="5"/>
+    <circle cx="450" cy="210" r="6" fill="#9bea84" opacity="0.75"/>
+    <rect x="404" y="294" width="92" height="34" rx="10" fill="#fff" opacity="0.95"/>
+    <rect x="418" y="278" width="34" height="34" rx="9" fill="#fff" opacity="0.95"/>
+
+    <!-- Neck -->
+    <path d="M378 376 H522 L540 486 H360Z" fill="url(#edge)"/>
+    <path d="M382 398 H518" stroke="#9bea84" stroke-opacity="0.48" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- Shoulders / upper torso -->
+    <path d="M188 506 C250 436 650 436 712 506 L790 684 C812 740 762 810 704 778 L624 734 C584 716 318 716 276 734 L196 778 C138 810 88 740 110 684Z" fill="url(#shell)"/>
+    <path d="M302 548 C345 504 555 504 598 548 L640 745 C606 827 294 827 260 745Z" fill="#2b3037"/>
+    <path d="M318 578 C368 542 532 542 582 578 L610 732 C570 778 330 778 290 732Z" fill="url(#printed)"/>
+    <path d="M315 560 L268 722" stroke="#9aa2ad" stroke-opacity="0.28" stroke-width="5"/>
+    <path d="M585 560 L632 722" stroke="#9aa2ad" stroke-opacity="0.28" stroke-width="5"/>
+    <path d="M392 642 h116 v64 h-116z" fill="#090a0c" opacity="0.68"/>
+    <path d="M414 662 h72" stroke="#44157D" stroke-width="14" stroke-linecap="square"/>
+    <path d="M414 690 h72" stroke="#2d8914" stroke-width="8" stroke-linecap="square"/>
+
+    <!-- Upper arms -->
+    <path d="M104 706 C76 800 76 958 118 1070 C152 1126 250 1102 260 1036 L286 802 C288 754 148 672 104 706Z" fill="url(#shell)"/>
+    <path d="M796 706 C824 800 824 958 782 1070 C748 1126 650 1102 640 1036 L614 802 C612 754 752 672 796 706Z" fill="url(#shell)"/>
+    <path d="M145 756 C124 842 126 972 158 1046" stroke="#9aa2ad" stroke-opacity="0.22" stroke-width="5" fill="none"/>
+    <path d="M755 756 C776 842 774 972 742 1046" stroke="#9aa2ad" stroke-opacity="0.22" stroke-width="5" fill="none"/>
+
+    <!-- Elbows -->
+    <circle cx="205" cy="1116" r="70" fill="url(#joint)"/>
+    <circle cx="695" cy="1116" r="70" fill="url(#joint)"/>
+    <circle cx="205" cy="1116" r="35" fill="#0a0b0d" stroke="#6f7782" stroke-opacity="0.45" stroke-width="6"/>
+    <circle cx="695" cy="1116" r="35" fill="#0a0b0d" stroke="#6f7782" stroke-opacity="0.45" stroke-width="6"/>
+
+    <!-- Forearms -->
+    <path d="M150 1176 C106 1288 112 1452 170 1540 C200 1584 274 1574 296 1516 L276 1212 C256 1160 174 1138 150 1176Z" fill="url(#shell)"/>
+    <path d="M750 1176 C794 1288 788 1452 730 1540 C700 1584 626 1574 604 1516 L624 1212 C644 1160 726 1138 750 1176Z" fill="url(#shell)"/>
+    <path d="M178 1238 L266 1238" stroke="#9bea84" stroke-opacity="0.42" stroke-width="6" stroke-linecap="round"/>
+    <path d="M634 1238 L722 1238" stroke="#9bea84" stroke-opacity="0.42" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Core torso -->
+    <path d="M284 780 C316 746 584 746 616 780 L652 1110 C640 1226 560 1298 450 1298 C340 1298 260 1226 248 1110Z" fill="url(#shell)"/>
+    <path d="M315 828 C352 798 548 798 585 828 L604 1088 C588 1176 530 1230 450 1230 C370 1230 312 1176 296 1088Z" fill="url(#printed)" opacity="0.9"/>
+    <path d="M338 856 L304 1086" stroke="#9aa2ad" stroke-opacity="0.24" stroke-width="4"/>
+    <path d="M562 856 L596 1086" stroke="#9aa2ad" stroke-opacity="0.24" stroke-width="4"/>
+    <path d="M382 1010 h136 v54 h-136z" fill="#111318" stroke="#6b7280" stroke-opacity="0.3"/>
+    <path d="M415 1028 h70" stroke="#44157D" stroke-width="10"/>
+    <path d="M415 1050 h70" stroke="#2d8914" stroke-width="7"/>
+
+    <!-- Pelvis -->
+    <path d="M286 1326 C356 1290 544 1290 614 1326 L666 1470 C608 1536 292 1536 234 1470Z" fill="url(#edge)"/>
+    <path d="M346 1362 C398 1338 502 1338 554 1362 L584 1456 C542 1484 358 1484 316 1456Z" fill="#0b0d10" opacity="0.76"/>
+
+    <!-- Thighs -->
+    <path d="M286 1510 C258 1640 260 1832 306 1932 C338 1986 430 1966 432 1898 L420 1546 C410 1490 308 1466 286 1510Z" fill="url(#shell)"/>
+    <path d="M614 1510 C642 1640 640 1832 594 1932 C562 1986 470 1966 468 1898 L480 1546 C490 1490 592 1466 614 1510Z" fill="url(#shell)"/>
+    <path d="M316 1588 C300 1700 302 1828 334 1904" stroke="#9aa2ad" stroke-opacity="0.23" stroke-width="5" fill="none"/>
+    <path d="M584 1588 C600 1700 598 1828 566 1904" stroke="#9aa2ad" stroke-opacity="0.23" stroke-width="5" fill="none"/>
+
+    <!-- Knees -->
+    <circle cx="368" cy="1998" r="78" fill="url(#joint)"/>
+    <circle cx="532" cy="1998" r="78" fill="url(#joint)"/>
+    <rect x="310" y="1970" width="116" height="56" rx="17" fill="#0a0b0d" stroke="#6f7782" stroke-opacity="0.42" stroke-width="5"/>
+    <rect x="474" y="1970" width="116" height="56" rx="17" fill="#0a0b0d" stroke="#6f7782" stroke-opacity="0.42" stroke-width="5"/>
+
+    <!-- Lower legs -->
+    <path d="M296 2066 C274 2172 286 2288 330 2340 H424 C452 2258 448 2138 414 2068 C392 2032 316 2030 296 2066Z" fill="url(#shell)"/>
+    <path d="M604 2066 C626 2172 614 2288 570 2340 H476 C448 2258 452 2138 486 2068 C508 2032 584 2030 604 2066Z" fill="url(#shell)"/>
+    <path d="M320 2134 h86" stroke="#9bea84" stroke-opacity="0.37" stroke-width="6" stroke-linecap="round"/>
+    <path d="M494 2134 h86" stroke="#9bea84" stroke-opacity="0.37" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Feet -->
+    <path d="M250 2338 C330 2314 430 2318 474 2352 C490 2378 472 2396 416 2396 H250 C214 2396 208 2360 250 2338Z" fill="#090a0c"/>
+    <path d="M650 2338 C570 2314 470 2318 426 2352 C410 2378 428 2396 484 2396 H650 C686 2396 692 2360 650 2338Z" fill="#090a0c"/>
+  </g>
+</svg>
