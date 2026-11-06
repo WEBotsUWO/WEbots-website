@@ -11,6 +11,7 @@
         encode a diff character)-->
   <!-- a meta tag that gives the browser info about ur website -->
   <meta charset="utf-8">
+  <meta name="description" content="WE Bots advances humanoid robotics at Western University through Project JOSH and the Canadian Humanoid Robotics Competition.">
   <link rel="stylesheet" href="styles.css">
   <script defer src="scripts.js"></script>
   <title>WE Bots</title>
@@ -33,9 +34,11 @@
 
       <nav class="nav-bar" id="main-nav" aria-label="Main navigation">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="mission.html">Mission</a></li>
           <li><a href="history.html">History</a></li>
           <li><a href="team.html">Team</a></li>
+          <li><a href="https://www.humanoidroboticscomp.com/" aria-label="CHRC competition website"><img class="chrc-mark" src="assets/logos/chrc-mark.jpeg" alt="" width="28" height="28">CHRC <span aria-hidden="true">&nearr;</span></a></li>
           <li><a class="nav-cta" href="sponsors.html">Sponsor Us</a></li>
           <li><a class="nav-join" href="#join">Join</a></li>
         </ul>
@@ -50,13 +53,27 @@
             <h1>WE BUILD ROBOTS!</h1>
           </div>
           <p class="hero-subtitle">
-            Welcome to WE Bots: the Western Engineering Robotics Design Team. We are building Project JOSH, a student-developed humanoid robotics platform for hands-on learning, testing, and future competition.
+            Welcome to WE Bots: the Western Engineering Robotics Design Team. We're building an open-source humanoid robot and launching the Canadian Humanoid Robotics Competition to help shape the future of university robotics.
           </p>
           <div class="hero-actions">
             <a class="primary-button" href="sponsors.html">Sponsor Us</a>
             <a class="secondary-button" href="#join">Join WE Bots</a>
             <a class="secondary-button" href="#josh">Meet JOSH</a>
+            <a class="secondary-button" href="#chrc">Discover CHRC</a>
           </div>
+        </div>
+      </section>
+
+      <section class="sponsor-strip" aria-labelledby="sponsor-thanks-heading">
+        <div class="section-content sponsor-strip-inner">
+          <h2 id="sponsor-thanks-heading">Thank you to our sponsors</h2>
+          <ul class="sponsor-strip-track" aria-label="WE Bots sponsors">
+            <li>
+              <a class="sponsor-logo-link" href="https://www.onshape.com/en/" aria-label="Visit Onshape's website">
+                <img src="assets/logos/onshape-logo.png" alt="Onshape" width="1556" height="347" loading="lazy">
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -77,15 +94,36 @@
               <span class="acronym-row"><span class="acronym-letter" aria-hidden="true">H</span><span>umanoid</span></span>
             </h2>
             <p>
-              Meet JOSH, WE Bots' humanoid robot platform. The goal is to build a humanoid robot that can move through its environment autonomously, balance reliably, and handle general movement tasks.
+              Meet JOSH, WE Bots' open-source humanoid robot platform. Our mission is to bring JOSH to life: a general-purpose robot that can move through its environment autonomously, balance reliably, and perform everyday movement tasks.
             </p>
             <p>
-              As the platform develops, we aim for JOSH to compete in FIRA's Humanoid Robot Competition: The HuroCup, where robots take place in various sporting events such as basketball, marathon, archery and more.
+              We're working toward an ambitious goal: Canada's first university-built, fully autonomous humanoid robot. As we grow the CHRC, we plan for JOSH to compete in its future seasons and at other robotics events.
             </p>
             <p class="josh-disclaimer">
               Concept render only - not finished hardware or final CAD.
             </p>
           </div>
+        </div>
+
+        <div class="section-content project-goals" aria-label="Project JOSH development targets">
+          <div class="project-goals-intro">
+            <p class="eyebrow">What we're working toward</p>
+            <h3>A full humanoid. Built to be shared.</h3>
+          </div>
+          <dl class="goal-list">
+            <div>
+              <dt>Two-year V1 target</dt>
+              <dd>Build a full humanoid platform with an integrated software stack and controls.</dd>
+            </div>
+            <div>
+              <dt>Fully open source</dt>
+              <dd>Keep designs, code, and project information organized, accessible, and maintainable.</dd>
+            </div>
+            <div>
+              <dt>Accessible by design</dt>
+              <dd>Develop a low-cost platform through practical design choices and careful use of resources.</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
@@ -93,17 +131,18 @@
         <div class="section-content">
           <div class="section-title-card about-title-card">
             <p class="eyebrow">About WE Bots</p>
-            <h2>Hands-on robotics, built by students.</h2>
+            <h2>A place to build.<br>A future to shape.</h2>
           </div>
 
           <div class="two-column about-content-grid">
             <div class="section-copy">
               <p>
-                WE Bots gives students an accessible place to learn robotics by contributing to a real engineering project. Members can help with design, manufacturing, electronics, power systems, controls, software, testing, documentation, media, outreach, and sponsorship.
+                WE Bots gives students the opportunity to build and contribute to a technology that is only beginning to find its place in the world: humanoid robotics. We're bringing Project JOSH to life while creating a competition for the next generation of university teams.
               </p>
               <p>
-                Our focus is not just finishing one robot. We are building the structure, technical knowledge, and documentation needed for future members to keep improving JOSH year after year.
+                We envision a future where university humanoid and home-service robotics competitions are as prestigious and widespread as SAE competitions. We want Western University to help define that future.
               </p>
+              <a class="text-link about-mission-link" href="mission.html">Explore our mission, vision, and values <span aria-hidden="true">&rarr;</span></a>
             </div>
 
             <div class="photo-stack">
@@ -115,46 +154,22 @@
         </div>
       </section>
 
-      <section class="roadmap-section" id="roadmap">
-        <div class="section-content">
-          <div class="section-heading centered">
-            <p class="eyebrow">Roadmap</p>
-            <h2>Road to competition</h2>
-            <p>
-              The goal is to move Project JOSH from a student development platform into a robot prepared for future FIRA HuroCup-style competition. Dates are planning targets and may shift as testing progresses.
-            </p>
+      <section class="chrc-section" id="chrc" aria-labelledby="chrc-heading">
+        <div class="section-content chrc-layout">
+          <div class="chrc-heading">
+            <p class="eyebrow">Founded by WE Bots</p>
+            <a class="chrc-logo-link" href="https://www.humanoidroboticscomp.com/" aria-label="Visit the CHRC website">
+              <img src="assets/logos/chrc-logo.png" alt="CHRC" width="721" height="710" loading="lazy">
+            </a>
+            <h2 id="chrc-heading">Canadian Humanoid<br>Robotics Competition</h2>
           </div>
-
-          <div class="roadmap-flow" aria-label="Project JOSH roadmap from 2026 to 2028">
-            <article class="roadmap-step">
-              <span class="roadmap-date">Summer 2026</span>
-              <h3>Project JOSH begins</h3>
-              <p>WE Bots' previous humanoid robot project is officially retired and relaunched as Project JOSH, with a more cohesive design and strategy.</p>
-            </article>
-
-            <article class="roadmap-step">
-              <span class="roadmap-date">Fall 2026</span>
-              <h3>Foundations</h3>
-              <p>Reinforcement learning, preliminary simulation, early CAD design, CAN communication setup, and motor selection.</p>
-            </article>
-
-            <article class="roadmap-step">
-              <span class="roadmap-date">Winter 2026</span>
-              <h3>Systems depth</h3>
-              <p>Deep learning, advancing the simulation, better integration between teams, battery management system work, and 3D printing testing.</p>
-            </article>
-
-            <article class="roadmap-step">
-              <span class="roadmap-date">2027-2028</span>
-              <h3>Assembly and integration</h3>
-              <p>Assembly, full integration, full simulation and vision system testing, and preparation for competition.</p>
-            </article>
-
-            <article class="roadmap-step final-step">
-              <span class="roadmap-date">2028 Target</span>
-              <h3>Competition target</h3>
-              <p>Complete the design and prepare for FIRA HuroCup competition and more.</p>
-            </article>
+          <div class="chrc-copy">
+            <h3>Let's build something that lasts.</h3>
+            <p>WE Bots is launching the CHRC: a new humanoid robotics competition for university and college teams, with its inaugural event planned for 2027.</p>
+            <p>The first season focuses on designing and building a humanoid hand. Future seasons will add more systems, building toward a full humanoid competition.</p>
+            <p>We want to give university teams a place to develop, test, and share their work, and build a competition that grows in scope, difficulty, and reputation year after year. WE Bots will be part of that journey as both the founding team and a competitor.</p>
+            <a class="primary-button" href="https://www.humanoidroboticscomp.com/">Visit the CHRC website <span aria-hidden="true">&nearr;</span></a>
+            <a class="text-link" href="mission.html#chrc">Our vision for the competition <span aria-hidden="true">&rarr;</span></a>
           </div>
         </div>
       </section>
@@ -176,7 +191,7 @@
           <a class="feature-card sponsor-card" href="sponsors.html">
             <span>Sponsor Us</span>
             <h2>Support student robotics</h2>
-            <p>Sponsors help fund parts, manufacturing, electronics, travel, outreach, and the long-term development of JOSH.</p>
+            <p>Sponsors help fund hardware, research, outreach, and the growth of humanoid robotics through JOSH and the CHRC.</p>
           </a>
         </div>
       </section>
@@ -184,12 +199,12 @@
       <section class="join-section" id="join">
         <div class="section-content join-card">
           <div>
-            <p class="eyebrow">Join WE Bots</p>
-            <h2>New members are welcome.</h2>
+            <p class="eyebrow">New members are welcome</p>
+            <h2>Join WE Bots.</h2>
             <p>
-              Join the Discord to access the membership form and communicate with the team. No previous robotics experience is required.
+              Any undergraduate student at Western can join. No experience required!
             </p>
-            <p class="meeting-callout">Summer meetings: Thursdays at 7:00 PM in ACEB 3435</p>
+            <p>Join our Discord to access the membership form, meet the team, and find out where you can contribute.</p>
           </div>
 
           <div class="contact-actions">
@@ -197,10 +212,7 @@
               <img src="assets/icons/discord.png" alt="Discord logo">
               <span>Join Discord</span>
             </a>
-            <a class="contact-button" href="https://instagram.com/webotsuwo?igshid=NTc4MTIwNjQ2YQ==" aria-label="Follow WE Bots on Instagram">
-              <img src="assets/icons/insta.png" alt="Instagram logo">
-              <span>Follow us on Instagram</span>
-            </a>
+            <a class="text-link join-instagram-link" href="https://www.instagram.com/webotsuwo/">Follow our progress on Instagram <span aria-hidden="true">&rarr;</span></a>
           </div>
         </div>
       </section>
@@ -213,13 +225,12 @@
             <img src="assets/logos/primary-all-white.png" alt="WE Bots logo">
           </a>
           <p>Western Engineering Robotics Design Team</p>
-          <p class="footer-small">Student-built robotics at Western University.</p>
+          <p class="footer-small">Advancing humanoid robotics at Western University.</p>
         </div>
 
         <div>
           <h3>Location</h3>
           <p>Amit Chakma Engineering Building<br>Room 3435<br>Western University<br>London, Ontario N6A 3K7</p>
-          <p class="footer-small">Summer meetings: Thursdays at 7:00 PM</p>
         </div>
 
         <div>
@@ -227,8 +238,9 @@
           <div class="footer-socials">
             <a href="https://discord.gg/RW7a62qgPr" aria-label="Discord"><img src="assets/icons/discord.png" alt="Discord">Discord</a>
             <a href="https://instagram.com/webotsuwo?igshid=NTc4MTIwNjQ2YQ==" aria-label="Instagram"><img src="assets/icons/insta.png" alt="Instagram">Instagram</a>
-            <a href="https://github.com/WEBotsUWO">GitHub</a>
+            <a href="https://www.humanoidroboticscomp.com/"><img class="chrc-mark" src="assets/logos/chrc-mark.jpeg" alt="" width="28" height="28" loading="lazy">CHRC</a>
           </div>
+          <a class="footer-email" href="mailto:webots@uwo.ca">webots@uwo.ca</a>
         </div>
       </div>
       <p class="copyright">&copy; 2026 WE Bots. Western Engineering Robotics Design Team.</p>

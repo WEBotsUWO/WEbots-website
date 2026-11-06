@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5, h6{
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
-  width: min(1260px, calc(100% - 36px));
+  width: min(1380px, calc(100% - 36px));
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -126,16 +126,22 @@ h1, h2, h3, h4, h5, h6{
   list-style: none;
 }
 
+.nav-bar{
+  flex-shrink: 0;
+}
+
 .nav-bar a{
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 6px;
   min-height: 40px;
   padding: 0 15px;
   border-radius: 999px;
   color: #fff;
   font-weight: 700;
   font-size: 0.92rem;
+  white-space: nowrap;
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
@@ -490,8 +496,7 @@ h1, h2, h3, h4, h5, h6{
   font-size: 0.9rem;
 }
 
-.feature-card span,
-.roadmap-date{
+.feature-card span{
   display: block;
   color: var(--green-accent);
   font-size: 0.74rem;
@@ -646,85 +651,241 @@ section{
   text-align: center;
 }
 
-.roadmap-section{
-  position: relative;
-  overflow: hidden;
-  padding-top: 110px;
-  padding-bottom: 110px;
-  background:
-    radial-gradient(circle at 12% 0%, rgba(var(--purple-rgb), 0.18), transparent 30%),
-    radial-gradient(circle at 88% 100%, rgba(var(--green-rgb), 0.12), transparent 30%),
-    linear-gradient(180deg, #242426 0%, #1b1b1d 100%);
-}
-
-.roadmap-flow{
-  position: relative;
+/* Current goals and the CHRC */
+.project-goals{
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 34px;
-  counter-reset: roadmap;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.8fr);
+  gap: 44px;
+  margin-top: 64px;
+  padding-top: 36px;
+  border-top: 1px solid var(--line);
 }
 
-.roadmap-flow::before{
-  content: "";
-  position: absolute;
-  top: 31px;
-  left: 8%;
-  right: 8%;
-  height: 3px;
-  background: linear-gradient(90deg, var(--green), var(--purple));
-  opacity: 0.86;
+.project-goals-intro h3{
+  max-width: 320px;
+  font-size: clamp(1.65rem, 2.4vw, 2.3rem);
 }
 
-.roadmap-step{
+.goal-list{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.goal-list dt{
+  margin-bottom: 12px;
+  color: var(--green-accent);
+  font-weight: 800;
+}
+
+.goal-list dd{
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+
+.about-mission-link{
+  gap: 8px;
+  margin-top: 24px;
+  line-height: 1.5;
+}
+
+.chrc-section{
   position: relative;
-  min-height: 260px;
-  padding: 76px 20px 24px;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 22px;
+  scroll-margin-top: 110px;
   background:
-    linear-gradient(155deg, rgba(255,255,255,0.085), rgba(255,255,255,0.035));
-  box-shadow: 0 16px 36px rgba(0,0,0,0.16);
-  counter-increment: roadmap;
+    radial-gradient(circle at 0% 80%, rgba(var(--purple-rgb), 0.22), transparent 45%),
+    radial-gradient(circle at 100% 0%, rgba(var(--green-rgb), 0.18), transparent 35%),
+    var(--darker);
+  border-block: 1px solid var(--line);
 }
 
-.roadmap-step::before{
-  content: "";
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: var(--green);
-  border: 5px solid #242426;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.14), 0 0 20px rgba(var(--green-rgb), 0.3);
+.chrc-layout{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(32px, 6vw, 90px);
+  align-items: center;
 }
 
-.roadmap-step::after{
-  content: "0" counter(roadmap);
-  position: absolute;
-  top: 16px;
-  right: 18px;
-  color: rgba(255,255,255,0.13);
-  font-size: 2.4rem;
-  font-weight: 900;
-  line-height: 1;
+.chrc-logo-link{
+  display: block;
+  width: clamp(180px, 21vw, 260px);
+  max-width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 12px;
+  background: #fff;
 }
 
-.roadmap-step h3{
-  font-size: 1.25rem;
-  margin: 10px 0 12px;
+.chrc-logo-link img{
+  width: 100%;
+  height: auto;
 }
 
-.roadmap-step p{
-  font-size: 0.94rem;
+.chrc-heading h2,
+.competition-direction h2{
+  margin-top: 22px;
+  font-size: clamp(1.65rem, 2.6vw, 2.5rem);
+  line-height: 1.2;
 }
 
-.final-step{
-  background: linear-gradient(145deg, rgba(var(--purple-rgb), 0.24), rgba(var(--green-rgb), 0.18));
+.chrc-copy h3{
+  font-size: clamp(1.65rem, 2.8vw, 2.8rem);
+}
+
+.chrc-copy p{
+  margin-top: 20px;
+}
+
+.chrc-copy .primary-button{
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.chrc-copy .text-link{
+  display: flex;
+  width: fit-content;
+  gap: 8px;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+/* Mission, vision, and values */
+.mission-hero{
+  padding-top: 48px;
+  background:
+    radial-gradient(circle at 90% 20%, rgba(var(--purple-rgb), 0.3), transparent 45%),
+    var(--darker);
+}
+
+.mission-hero h1{
+  max-width: 1080px;
+  font-size: clamp(2.6rem, 6.2vw, 5.8rem);
+  letter-spacing: -0.05em;
+}
+
+.mission-lead{
+  max-width: 780px;
+  margin-top: 24px;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+.mission-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.direction-section,
+.values-section{
+  scroll-margin-top: 110px;
+  border-top: 1px solid var(--line);
+}
+
+.direction-row{
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(32px, 6vw, 80px);
+  align-items: start;
+}
+
+.direction-row h2,
+.values-section h2,
+.mission-join h2{
+  font-size: clamp(2rem, 3.7vw, 3.6rem);
+  letter-spacing: -0.04em;
+}
+
+.direction-copy p + p{
+  margin-top: 20px;
+}
+
+.direction-copy .text-link,
+.direction-copy .primary-button{
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.direction-goals{
+  margin-top: 24px;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.direction-goals li + li{
+  margin-top: 12px;
+}
+
+.direction-goals li::marker{
+  color: var(--green-accent);
+}
+
+.values-section{
+  background: var(--darker);
+}
+
+.values-list{
+  margin-top: 40px;
+  list-style: none;
+  counter-reset: value;
+}
+
+.values-list li{
+  display: grid;
+  grid-template-columns: 40px minmax(180px, 0.7fr) minmax(0, 1.3fr);
+  gap: 28px;
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+  counter-increment: value;
+}
+
+.values-list li::before{
+  content: counter(value, decimal-leading-zero);
+  padding-top: 3px;
+  color: var(--green-accent);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.values-list h3{
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  line-height: 1.2;
+}
+
+.values-note{
+  max-width: 800px;
+  margin-top: 28px;
+  padding-left: 20px;
+  border-left: 2px solid var(--green);
+}
+
+.competition-direction{
+  background:
+    radial-gradient(circle at 0% 100%, rgba(var(--green-rgb), 0.15), transparent 40%),
+    linear-gradient(120deg, rgba(var(--purple-rgb), 0.12), transparent 65%);
+}
+
+.mission-join{
+  background: var(--darker);
+  border-top: 1px solid var(--line);
+}
+
+.mission-join .section-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.mission-join p:not(.eyebrow){
+  margin-top: 16px;
+}
+
+.mission-join .primary-button{
+  flex-shrink: 0;
 }
 
 .link-section{
@@ -815,20 +976,17 @@ section{
   box-shadow: var(--shadow);
 }
 
-.meeting-callout{
-  display: inline-flex;
-  margin-top: 20px;
-  padding: 12px 16px;
-  border-radius: 14px;
-  background: rgba(var(--green-rgb), 0.2);
-  border: 1px solid rgba(var(--green-rgb), 0.34);
-  color: #fff;
-  font-weight: 800;
-}
-
 .contact-actions{
   display: grid;
   gap: 14px;
+}
+
+.join-instagram-link{
+  gap: 8px;
+  justify-content: flex-start;
+  padding: 8px 4px;
+  font-size: 0.87rem;
+  line-height: 1.5;
 }
 
 .contact-button{
@@ -918,6 +1076,26 @@ section{
   gap: 6px;
   font-weight: 800;
   color: #fff;
+}
+
+.nav-bar .chrc-mark,
+.footer-socials .chrc-mark{
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+  border-radius: 5px;
+  background: #fff;
+  object-fit: contain;
+}
+
+.footer-email{
+  display: block;
+  width: fit-content;
+  margin-top: 18px;
+  color: var(--green-accent);
+  font-weight: 600;
+  overflow-wrap: anywhere;
 }
 
 .copyright{
@@ -1538,6 +1716,97 @@ details.hall-roster > .roster-subsection + .roster-subsection{
   flex: 0 0 auto;
 }
 
+.sponsor-strip{
+  padding: 24px 6%;
+  border-block: 1px solid var(--line);
+  background: var(--darker);
+}
+
+.sponsor-strip-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.sponsor-strip h2{
+  flex: 0 1 430px;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  line-height: 1.3;
+}
+
+.sponsor-strip-track{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-width: 0;
+  max-width: 100%;
+  padding: 4px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  list-style: none;
+}
+
+.sponsor-strip-track li{
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.sponsor-strip .sponsor-logo-link{
+  width: min(280px, 75vw);
+  padding: 16px 24px;
+  border-radius: 8px;
+}
+
+.current-sponsors{
+  padding: 72px 6%;
+  border-bottom: 1px solid var(--line);
+  background: var(--darker);
+}
+
+.current-sponsors-layout{
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(28px, 6vw, 80px);
+  align-items: center;
+}
+
+.current-sponsors-copy h2{
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+}
+
+.current-sponsors-copy p:not(.eyebrow){
+  max-width: 440px;
+  margin-top: 18px;
+}
+
+.sponsor-list{
+  display: grid;
+  gap: 32px;
+}
+
+.sponsor-entry{
+  min-width: 0;
+}
+
+.sponsor-logo-link{
+  display: block;
+  padding: clamp(24px, 4vw, 40px);
+  border-radius: 12px;
+  background: #f5f5f2;
+}
+
+.sponsor-logo-link img{
+  width: 100%;
+  height: auto;
+}
+
+.sponsor-entry p{
+  margin-top: 16px;
+  font-size: 0.95rem;
+}
+
 .sponsor-overview{
   display: grid;
   grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1fr);
@@ -1700,33 +1969,20 @@ details.hall-roster > .roster-subsection + .roster-subsection{
   background: #f5f5f5;
 }
 
-@media (max-width: 1260px){
+@media (max-width: 1380px){
   .full-team-name{
     display: none;
   }
 }
 
 @media (max-width: 1100px){
-  .roadmap-flow{
+  .project-goals{
     grid-template-columns: 1fr;
+    gap: 28px;
   }
 
-  .roadmap-flow::before{
-    top: 0;
-    bottom: 0;
-    left: 34px;
-    right: auto;
-    height: auto;
-    width: 3px;
-  }
-
-  .roadmap-step{
-    padding: 26px 24px 24px 74px;
-  }
-
-  .roadmap-step::before{
-    left: 22px;
-    top: 28px;
+  .project-goals-intro h3{
+    max-width: none;
   }
 
   .feature-links{
@@ -1759,6 +2015,50 @@ details.hall-roster > .roster-subsection + .roster-subsection{
 }
 
 @media (max-width: 900px){
+  .goal-list,
+  .chrc-layout,
+  .current-sponsors-layout,
+  .direction-row{
+    grid-template-columns: 1fr;
+  }
+
+  .goal-list{
+    gap: 24px;
+  }
+
+  .sponsor-strip-inner{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .sponsor-strip h2{
+    flex-basis: auto;
+  }
+
+  .goal-list > div{
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .goal-list > div:last-child{
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .values-list li{
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 12px 16px;
+  }
+
+  .values-list li p{
+    grid-column: 2;
+  }
+
+  .mission-join .section-content{
+    display: grid;
+  }
+
   .site-header{
     top: 10px;
     width: calc(100% - 20px);
@@ -2047,7 +2347,6 @@ details.hall-roster > .roster-subsection + .roster-subsection{
     filter: saturate(1.06) contrast(1.03);
   }
 
-  .roadmap-step,
   .josh-info-card,
   .josh-visual-card,
   .profile-card,
@@ -2061,7 +2360,6 @@ details.hall-roster > .roster-subsection + .roster-subsection{
       box-shadow 0.2s ease;
   }
 
-  .roadmap-step:hover,
   .josh-info-card:hover,
   .josh-visual-card:hover,
   .profile-card:hover,
@@ -2084,11 +2382,21 @@ details.hall-roster > .roster-subsection + .roster-subsection{
     box-shadow: 0 18px 34px rgba(0,0,0,0.12), 0 0 24px rgba(var(--green-rgb), 0.1);
   }
 
-  .footer-socials a{
+  .sponsor-logo-link{
+    transition: box-shadow 0.2s ease;
+  }
+
+  .sponsor-logo-link:hover{
+    box-shadow: 0 0 28px rgba(var(--green-rgb), 0.24);
+  }
+
+  .footer-socials a,
+  .footer-email{
     transition: color 0.2s ease, transform 0.2s ease;
   }
 
-  .footer-socials a:hover{
+  .footer-socials a:hover,
+  .footer-email:hover{
     color: var(--green-accent);
     transform: translateY(-1px);
   }
